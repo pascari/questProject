@@ -7,8 +7,8 @@
 </head>
 <body>
 <div>
-    <h1>QUEST GAME</h1>
-    <button onclick="window.location='game'">Начать игру</button>
+    <h1>Enjoy the Quest</h1>
+    <button onclick="window.location='game'">Start</button>
 </div>
 </body>
 </html>

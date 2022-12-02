@@ -28,9 +28,9 @@
         <h1>${wrongAnswer.getWrongAnswerEndText()}</h1>
     </c:if>
     <c:if test="${wrongAnswer == null}">
-        <h1>Тебя вернули домой</h1>
+        <h1>You have returned home. You win!</h1>
     </c:if>
-    <button onclick="window.location='/restart'" class="button button1">Начать заново</button>
+    <button onclick="window.location='/restart'" class="button button1">Start over</button>
 </c:if>
 
 </body>
