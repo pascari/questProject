@@ -21,16 +21,16 @@ public class ServletTest {
 
     HttpSession session = mock(HttpSession.class);
 
-    Question question1 = new Question(1, "Ты потерял память.\nПринять вызов НЛО?",List.of(
-            new Answer("Принять вызов"),
-                new Answer("Отклонить вызов", "Ты отклонил вызов. Поражение")));
+    Question question1 = new Question(1, "You have lost your memory. Take the UFO Challenge?",List.of(
+            new Answer("Accept the Challenge"),
+                new Answer("Reject the Challenge", "You rejected the Challenge. You Defeat!")));
 
-    Question question2 = new Question(2, "Ты принял вызов. Поднимаешься на мостик к капитану?", List.of(
-            new Answer("Подняться на мостик"),
-            new Answer("Откзаться подниматься на мостик", "Ты не пошел на переговоры. Поражение.")));
+    Question question2 = new Question(2, "You have accepted the Challenge. Going up to the bridge to see the captain?", List.of(
+            new Answer("Accept to climb the bridge"),
+            new Answer("Refuse to climb the bridge", "You didn't going to negotiate. You Defeat!")));
 
     @Test
-    @DisplayName("Проверка 'Плохого ответа' и завершение игры")
+    @DisplayName("Checking for 'Bad Answer' and ending the quest")
     public void doGetGameServletTestWrongAnswer() throws IOException {
         GameServlet gameServlet = new GameServlet();
         when(request.getSession()).thenReturn(session);
@@ -44,7 +44,7 @@ public class ServletTest {
     }
 
     @Test
-    @DisplayName("Проверка 'Хорошего ответа' и продолжение игры")
+    @DisplayName("Checking for 'Good Answer' and continuing the quest")
     public void doGetGameServletTestRightAnswer() throws IOException {
         GameServlet gameServlet = new GameServlet();
         when(request.getSession()).thenReturn(session);

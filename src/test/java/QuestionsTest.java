@@ -10,7 +10,7 @@ public class QuestionsTest {
     QuestionManager questionManager = new QuestionManager();
 
     @Test
-    @DisplayName("Проверяем заполнены ли вопросы")
+    @DisplayName("Check if the questions are filled in")
     public void getByIdTest() {
         int questionId = 1;
         Question question = questionManager.getById(questionId);
@@ -18,7 +18,7 @@ public class QuestionsTest {
     }
 
     @Test
-    @DisplayName("Проверяем все ли вопросы содержат ответы среди которых 1 верный. А так же неверный ответы содержат текст")
+    @DisplayName("Check whether all questions contain answers, of which one is correct. As well as incorrect answers contain the text.")
     public void allTestHaveAnswersAndOnlyOneIsRight() {
         boolean result = true;
         for (Question question : QuestionManager.questionList.values()) {
