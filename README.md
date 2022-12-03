@@ -1,4 +1,4 @@
-# JavaRush Module 3 project. Quest Project.
+# JavaRush Module 3 Final Project. Quest Project.
 
 Task: write a short text quest.
 The question in each subsequent step depends on the previous answer.

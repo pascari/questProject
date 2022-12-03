@@ -34,3 +34,7 @@ table {
     margin-right: auto;
 }
 
+ table, th, td {
+     border-style: ridge;
+ }
+
